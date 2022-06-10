@@ -1,5 +1,7 @@
 ---
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -16,6 +18,7 @@ knitr::opts_chunk$set(
 # dqtools
 
 <!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 TAF data users often need to assess the feasibility of specific data analytic 
@@ -39,12 +42,14 @@ remotes::install_github("jjchern/dqtools")
 
 ## Example
 
-```{r example}
-library(tidyverse)
+```{r example, message=FALSE}
+library(dplyr)
 
-# List all available datasets
-# data(package = "dqtools") %>% 
-#     pluck("results") %>% 
-#     as_tibble() %>% 
-#     select(Package, Item)
+dqtools::dq_ip_file
+
+dqtools::dq_ip_file |> count(Variable)
+
+dqtools::dq_ip_file |> count(Topic)
+
+dqtools::dq_ip_file |> count(Topic, `DQ Assessment`)
 ```
