@@ -1,0 +1,50 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# dqtools
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+TAF data users often need to assess the feasibility of specific data analytic 
+tasks. One typical workflow is to first specify the TAF file types, states, 
+years, and variables of interest, and then check the fantastic 
+[DQ Atlas](https://www.medicaid.gov/dq-atlas/welcome) site for potential data 
+quality (DQ) concerns. 
+
+The goal of `dqtools` is to simplify the second step for experienced TAF users 
+by providing a state-year-variable level assessment for different TAF file types 
+made available by DQ Atlas.
+
+## Installation
+
+You can install the development version of `dqtools` like so:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("jjchern/dqtools")
+```
+
+## Example
+
+```{r example}
+library(tidyverse)
+
+# List all available datasets
+# data(package = "dqtools") %>% 
+#     pluck("results") %>% 
+#     as_tibble() %>% 
+#     select(Package, Item)
+```
