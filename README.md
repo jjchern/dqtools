@@ -19,6 +19,8 @@ The goal of `dqtools` is to simplify the second step for experienced TAF
 users by providing a state-year-variable level assessment for different
 TAF file types made available by DQ Atlas.
 
+Also see [dqtoolsShiny](https://jjchen.shinyapps.io/dqtoolsShiny/).
+
 ## Installation
 
 You can install the development version of `dqtools` like so:
